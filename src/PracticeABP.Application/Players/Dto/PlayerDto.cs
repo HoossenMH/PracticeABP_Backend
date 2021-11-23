@@ -8,12 +8,13 @@ using System.Text;
 namespace PracticeABP.Players.Dto
 {
     [AutoMapFrom(typeof(Player))]
+    [AutoMapTo(typeof(Player))]
     public class PlayerDto : EntityDto<int>
     {
         public string Name { get; set; }
 
         public int Age { get; set; }
 
-        public decimal Height { get; set; }
+        public double Height { get; set; }
     }
 }

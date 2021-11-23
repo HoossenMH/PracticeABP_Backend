@@ -1,12 +1,11 @@
-﻿using Abp.Domain.Entities;
-
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Abp.Application.Services.Dto;
+using Abp.AutoMapper;
 
 namespace PracticeABP.Players
 {
-    public class Player : Entity<int>
+    [AutoMapFrom(typeof(Player))]
+    [AutoMapTo(typeof(Player))]
+    public class CreatePlayerDto
     {
         public string Name { get; set; }
 
